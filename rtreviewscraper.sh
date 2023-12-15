@@ -13,7 +13,7 @@ audiencepercentage=$(curl -s "$rturl/$rtmovieformat" | grep "audiencescore" | cu
 function TheReviews { #function for getting the review into a file 
 	echo "Reviews for the movie $movieinput:" >> $rtmovieformat.txt #first line
 	echo "--" >> $rtmovieformat.txt #adding this for the sed to come later (makes sure reviews before each review blurb
-	curl -s "$wholeurl" | grep -A 2 "class=\"the_review\"" | cut -d ">" -f 2 >> $rtmovieformat.txt #gets all the divs that contain the reviews 
+	curl -s "$wholeurl" | grep -A 2 "review-quote" | cut -d ">" -f 2 >> $rtmovieformat.txt #gets all the divs that contain the reviews 
         dos2unix -q $rtmovieformat.txt #found this will remove all ^M from the vim/txt file created
         sed -i "/^$/d" $rtmovieformat.txt #removes extra blank lines
         sed -i "s/^[ \t]*//" $rtmovieformat.txt #removes the long spaces at the start of reviews
