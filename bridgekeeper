@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Fun nod to python
+
+echo "Answer me these questions three, 'ere the other side ye see':"
+
+echo "What is your name"
+
+name="King Arthur"
+
+echo "What is your quest"
+
+if [ "$name" = "Sir Robin" ]; then 
+    echo "What is your capital of Assyria?"
+elif [ "$name" = "Sir Lancelot" ]; then 
+    echo "What is your favorite colour?"
+elif [ "$name" = "King Arthur" ]; then
+    echo "What is the air speed velocity of an unladen swallow?"
+    echo "How do you know so much about swallows?"
+    echo "Well, as a King you have to know these things you know."
+fi
+
