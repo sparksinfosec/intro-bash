@@ -6,7 +6,7 @@ echo "Answer me these questions three, 'ere the other side ye see':"
 
 echo "What is your name"
 
-name="King Arthur"
+read -r name
 
 echo "What is your quest"
 
@@ -18,5 +18,7 @@ elif [ "$name" = "King Arthur" ]; then
     echo "What is the air speed velocity of an unladen swallow?"
     echo "How do you know so much about swallows?"
     echo "Well, as a King you have to know these things you know."
+else
+    echo "Aww killer bunny"
 fi
 
