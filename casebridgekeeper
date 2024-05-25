@@ -1,28 +1,31 @@
-#!/bin/sh
+#!/bin/bash
 
 # Fun nod to python
+# set -x 
+printf "Answer me these questions three, 'ere the other side ye see':\n"
 
-echo "Answer me these questions three, 'ere the other side ye see':"
-
-echo "What is your name"
+printf "What is your name\n"
 
 read -r name
 
-echo "What is your quest"
+printf "What is your quest\n"
 
-case $name in
-    "Sir Robin")
-        echo "What is your capital of Assyria?"
+
+case ${name,,} in
+    "robin")
+        printf "What is your capital of Assyria?\n"
         ;;
-    "Sir Lancelot")
-        echo "What is your favorite colour?"
+    "lancelot")
+        printf "What is your favorite colour?\n"
         ;;
-    "King Arthur")
-        echo "What is the air speed velocity of an unladen swallow?"
-        echo "How do you know so much about swallows?"
-        echo "Well, as a King you have to know these things you know."
+    "arthur")
+        printf "What is the air speed velocity of an unladen swallow?\n"
+        printf "How do you know so much about swallows?\n"
+        printf "Well, as a King you have to know these things you know.\n"
         ;;
     *)
-        echo "Killer Bunny"
+        printf "Killer Bunny\n"
+        ;;
 esac
 
+# Look at adding color and practicing 
