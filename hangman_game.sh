@@ -3,6 +3,7 @@
 function PrintBoard { #function that takes in a number and prints the board
 	if [[ $1 = 0 ]]
 	then 
+        clear
 		echo " "
 		echo " ----------| "
 		echo ""
@@ -11,6 +12,7 @@ function PrintBoard { #function that takes in a number and prints the board
 		echo ""
 	elif [[ $1 = 1 ]]
 	then 
+        clear
 		echo " " 
 		echo " ----------| "
 		echo "           O "
@@ -19,6 +21,7 @@ function PrintBoard { #function that takes in a number and prints the board
 		echo ""
 	elif [[ $1 = 2 ]]
 	then 
+        clear
 	        echo " "
                 echo " ----------| "
                 echo "           O "
@@ -28,6 +31,7 @@ function PrintBoard { #function that takes in a number and prints the board
 	       echo ""	
         elif [[ $1 = 3 ]]
         then
+            clear
                 echo " "
                 echo " ----------| "
                 echo "           O "
@@ -37,6 +41,7 @@ function PrintBoard { #function that takes in a number and prints the board
 		echo ""
        	elif [[ $1 = 4 ]]
         then
+                clear
                 echo " "
                 echo " ----------| "
                 echo "           O "
@@ -47,6 +52,7 @@ function PrintBoard { #function that takes in a number and prints the board
 		echo ""
 	elif [[ $1 = 5 ]]
         then
+                clear
                 echo " "
                 echo " ----------| "
                 echo "           O "
@@ -104,12 +110,14 @@ do
 		echo ""
 		echo "Correct!"
 		echo "$guess is in the word"
+        sleep 1.5
 		PrintBoard $guesscount
 		echo "Guess the Word: $answer" #we should print the answer here so next loop will set the rest of the board
 	else 
 		echo ""
 		echo "Wrong!"
 		echo "$guess is not in the word"
+        sleep 1.5
                 guesscount=$(($guesscount + 1)) #increase the guess count only on incorrect guesses 
 	        PrintBoard $guesscount #then print the current state of the board 
 	        if [[ $guesscount -eq 5 ]] #within the incorrect option should check to see if guess count hits 5
