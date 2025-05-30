@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while true; do #(infinite)
+    echo "1: shutdown"
+    echo "2: restart"
+    echo "3: exit menu"
+    read -p "Enter your choice: " choice
+    if [ $choice -eq 1 ];then
+        shutdown now
+    elif [ $choice -eq 2 ];then
+        shutdown -r now
+    elif [ $choice -eq 3 ];then
+        break #(break out of the loop)
+    else
+        continue #(go to the top of the loop if something other than 1,2,or 3 is entered)
+    fi
+done
+
+
